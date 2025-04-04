@@ -15,7 +15,7 @@ function App() {
         <Container>
           <MyFirstApi />
           <MySeconApi />
-          <MyFirstApi />
+          <MyThirdApi />
         </Container>
       </main>
       <MyFooter />
