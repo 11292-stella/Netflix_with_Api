@@ -8,7 +8,7 @@ function MyNav() {
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
-            src="public/netflix_logo.png"
+            src="/netflix_logo.png"
             alt="logo"
             className="img-fluid"
             style={{ width: "120px", height: "auto" }}
@@ -89,7 +89,7 @@ function MyNav() {
             </button>
             <a className="navbar-brand" href="#">
               <img
-                src="public/kids_icon.png"
+                src="/kids_icon.png"
                 alt="avatar"
                 className="img-fluid"
                 style={{ width: "50px", height: "auto" }}
