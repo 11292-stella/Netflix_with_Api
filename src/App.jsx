@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap"
 import MyFirstApi from "./components/MyFirstApi"
 import MySeconApi from "./components/MySecondApi"
 import MyThirdApi from "./components/MyThirdApi"
+import EditProfile from "./components/EditProfile"
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Container>
           <MyFirstApi />
           <MySeconApi />
-          <MyThirdApi />
+          <MyFirstApi />
         </Container>
       </main>
       <MyFooter />
