@@ -1,0 +1,26 @@
+.footer-icon {
+  color: #838383;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+}
+
+.footer-links p {
+  margin-bottom: 0.3em;
+}
+
+.footer-links a {
+  color: #838383;
+  text-decoration: none;
+}
+
+.footer-button {
+  color: #838383 !important;
+  border-color: #838383 !important;
+}
+
+.copyright {
+  font-size: 0.6rem;
+}
