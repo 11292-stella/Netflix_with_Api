@@ -40,14 +40,12 @@ class MyFirstApi extends Component {
     return (
       <Container className="my-5">
         <Row xs={2} sm={3} md={4} lg={6} xl={10} className="g-4">
-          {/* Renderizza le prime 6 immagini */}
           {firstSix.map((movie) => (
             <Col key={movie.imdbID}>
               <Image src={movie.Poster} fluid />
             </Col>
           ))}
 
-          {/* Aggiungi un carosello per le restanti immagini nell'ultima colonna */}
           <Col key="carousel" className="d-flex justify-content-center">
             <Carousel>
               {remaining.map((movie) => (
