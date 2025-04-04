@@ -2,6 +2,7 @@ import { Component } from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import { Carousel } from "react-bootstrap"
+import "./imgStyles.css"
 
 const URL = "https://www.omdbapi.com/?apikey=fcd33959&s=harry%20potter"
 class MyFirstApi extends Component {

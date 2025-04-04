@@ -1,0 +1,7 @@
+.col img {
+  transition: trasform 0.2s;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}
