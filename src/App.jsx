@@ -8,7 +8,7 @@ import MyThirdApi from "./components/MyThirdApi"
 import EditProfile from "./components/EditProfile"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MovieDetails from "./components/MovieDetails"
-import MyList from "./components/MyList"
+
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +32,6 @@ function App() {
                 }
               />
               <Route path="/profile" element={<EditProfile />} />
-              <Route path="/mylist" element={<MyList />} />
             </Routes>
           </Container>
         </main>

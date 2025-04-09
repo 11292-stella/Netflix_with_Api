@@ -39,19 +39,9 @@ function MyNav() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                My List
-              </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link to="/mylist" className="dropdown-item">
+                  <Link to="/mylist" className="text-light">
                     My List
                   </Link>
                 </li>
