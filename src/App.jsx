@@ -6,20 +6,38 @@ import MyFirstApi from "./components/MyFirstApi"
 import MySeconApi from "./components/MySecondApi"
 import MyThirdApi from "./components/MyThirdApi"
 import EditProfile from "./components/EditProfile"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import MovieDetails from "./components/MovieDetails"
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100 bg-dark">
-      <MyNav />
-      <main className="flex-grow-1">
-        <Container>
-          <MyFirstApi />
-          <MySeconApi />
-          <MyThirdApi />
-        </Container>
-      </main>
-      <MyFooter />
-    </div>
+    <BrowserRouter>
+      <div className="d-flex flex-column min-vh-100 bg-dark">
+        <MyNav />
+        <main className="flex-grow-1">
+          <Container>
+            <Routes>
+              <Route
+                path="/movie-details/:movieId"
+                element={<MovieDetails />}
+              />
+              <Route
+                path="/"
+                element={
+                  <div>
+                    <MyFirstApi />
+                    <MySeconApi />
+                    <MyThirdApi />
+                  </div>
+                }
+              />
+              <Route path="/profile" element={<EditProfile />} />
+            </Routes>
+          </Container>
+        </main>
+        <MyFooter />
+      </div>
+    </BrowserRouter>
   )
 }
 
