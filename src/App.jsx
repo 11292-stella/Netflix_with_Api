@@ -22,7 +22,7 @@ function App() {
                 element={<MovieDetails />}
               />
               <Route
-                path="/"
+                path="/tvshow"
                 element={
                   <div>
                     <MyFirstApi />

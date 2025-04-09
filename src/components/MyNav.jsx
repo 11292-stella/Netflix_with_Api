@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import "bootstrap-icons/font/bootstrap-icons.css"
+import { Link } from "react-router-dom"
 
 function MyNav() {
   return (
@@ -27,30 +28,16 @@ function MyNav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item"></li>
             <li className="nav-item">
-              <a
-                className="nav-link active text-light"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-light" href="#">
-                Tv Shows
-              </a>
+              <Link to="/tvshow" className="navbar-brand text-light">
+                TVshow
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link text-light dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Recently Added
-              </a>
+              <Link to="/profile" className="navbar-brand text-light">
+                Profile
+              </Link>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
@@ -66,9 +53,9 @@ function MyNav() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    My list
-                  </a>
+                  <Link to="/" className="navbar-brand text-light">
+                    My List
+                  </Link>
                 </li>
               </ul>
             </li>

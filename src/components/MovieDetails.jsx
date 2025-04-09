@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { Container, Row, Col, Image } from "react-bootstrap"
-
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 const MovieDetails = () => {
   const { movieId } = useParams() // Prendi l'ID del film dal parametro dell'URL
   const [movieData, setMovieData] = useState(null)
@@ -72,36 +72,54 @@ const MovieDetails = () => {
 
   return (
     <Container className="my-5">
-      <Row>
-        <Col md={4}>
-          <Image src={movieData.Poster} fluid alt={movieData.Title} />
-        </Col>
-        <Col md={8}>
-          <h2>{movieData.Title}</h2>
-          <p>
-            <strong>Anno:</strong> {movieData.Year}
-          </p>
-          <p>
-            <strong>Genere:</strong> {movieData.Genre}
-          </p>
-          <p>
-            <strong>Trama:</strong> {movieData.Plot}
-          </p>
+      <Row className="justify-content-center align-items-center">
+        <Col md={8} className="text-center">
+          <Card>
+            <Card.Header className="bg-dark text-light">
+              <h2>{movieData.Title}</h2>
+            </Card.Header>
+            <Card.Body className="bg-dark text-light">
+              <Row>
+                <Col md={4}>
+                  <Image src={movieData.Poster} fluid alt={movieData.Title} />
+                </Col>
+                <Col
+                  md={8}
+                  className="d-flex flex-column align-items-center align-items-md-start text-center text-md-start"
+                >
+                  <p>
+                    <strong>Anno:</strong> {movieData.Year}
+                  </p>
+                  <p>
+                    <strong>Genere:</strong> {movieData.Genre}
+                  </p>
+                  <p>
+                    <strong>Trama:</strong> {movieData.Plot}
+                  </p>
+                </Col>
+              </Row>
+
+              <h4 className="mt-4">Commenti:</h4>
+              <ul className="list-unstyled">
+                {comments.length > 0 ? (
+                  comments.map((comment) => (
+                    <li key={comment._id}>
+                      {comment.comment} – <strong>{comment.rate}/5</strong>
+                    </li>
+                  ))
+                ) : (
+                  <p>Nessun commento trovato.</p>
+                )}
+              </ul>
+            </Card.Body>
+            <Card.Footer className="bg-dark text-center">
+              <Link to="/tvshow">
+                <Button variant="info">Torna alla Home</Button>
+              </Link>
+            </Card.Footer>
+          </Card>
         </Col>
       </Row>
-
-      <h4 className="mt-4">Commenti:</h4>
-      <ul>
-        {comments.length > 0 ? (
-          comments.map((comment) => (
-            <li key={comment._id}>
-              {comment.comment} – <strong>{comment.rate}/5</strong>
-            </li>
-          ))
-        ) : (
-          <p>Nessun commento trovato.</p>
-        )}
-      </ul>
     </Container>
   )
 }
