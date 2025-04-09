@@ -28,41 +28,39 @@ function MyNav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item"></li>
             <li className="nav-item">
               <Link to="/tvshow" className="navbar-brand text-light">
                 TVshow
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <Link to="/profile" className="navbar-brand text-light">
                 Profile
               </Link>
-              <ul className="dropdown-menu">
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                My List
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link to="/mylist" className="dropdown-item">
+                    My List
+                  </Link>
+                </li>
                 <li>
                   <a className="dropdown-item" href="#">
                     Movies
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Recently Added
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link to="/" className="navbar-brand text-light">
-                    My List
-                  </Link>
-                </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-light" href="#">
-                My list
-              </a>
             </li>
           </ul>
 
