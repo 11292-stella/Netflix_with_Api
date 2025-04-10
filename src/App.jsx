@@ -22,6 +22,16 @@ function App() {
                 element={<MovieDetails />}
               />
               <Route
+                path="/"
+                element={
+                  <div>
+                    <MyFirstApi />
+                    <MySeconApi />
+                    <MyThirdApi />
+                  </div>
+                }
+              />
+              <Route
                 path="/tvshow"
                 element={
                   <div>
